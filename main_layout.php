@@ -275,26 +275,123 @@ AppAsset::register($this);
                             <nav id="menu" class="nav-main" role="navigation">
                                 <ul class="nav nav-main">
                                     <li class="nav-active">
-                                        <a href="statics/index.html">
+                                        <!-- <a href="statics/index.html"> -->
+                                            <a href="index.php">
                                             <i class="fa fa-home" aria-hidden="true"></i>
                                             <span>Dashboard</span>
                                         </a>
                                     </li>
-                                    <li>
+                                    <!--<li>
                                         <a href="statics/mailbox-folder.html">
                                             <span class="pull-right label label-primary">182</span>
                                             <i class="fa fa-envelope" aria-hidden="true"></i>
                                             <span>Mailbox</span>
                                         </a>
-                                    </li>
+                                    </li>-->
                                     <li class="nav-parent">
                                         <a>
                                             <i class="fa fa-copy" aria-hidden="true"></i>
-                                            <span>Pages</span>
+                                            <span>个人作业</span>
                                         </a>
                                         <ul class="nav nav-children">
-                                            <li>
-                                                <a href="statics/pages-signup.html">
+                                             <li class="nav-parent">
+                                                <a> 
+                                                    <i class="fa fa-copy" aria-hidden="true"></i>
+                                                    <span>陈燕</span>
+                                                </a>
+                                                <ul class="nav nav-children">
+                                                  <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业1 
+                                                     </a>
+                                                  </li> 
+                                                   <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业2 
+                                                     </a>
+                                                  </li> 
+                                                   <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业3 
+                                                     </a>
+                                                  </li>    
+                                                </ul>
+                                            </li>
+                                            
+                                             <li class="nav-parent">
+                                                <a> 
+                                                    <i class="fa fa-copy" aria-hidden="true"></i>
+                                                    <span>苑华莹</span>
+                                                </a>
+                                                <ul class="nav nav-children">
+                                                  <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业1 
+                                                     </a>
+                                                  </li> 
+                                                   <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业2 
+                                                     </a>
+                                                  </li> 
+                                                   <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业3 
+                                                     </a>
+                                                  </li>    
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-parent">
+                                                <a> 
+                                                    <i class="fa fa-copy" aria-hidden="true"></i>
+                                                    <span>郑惠麟</span>
+                                                </a>
+                                                <ul class="nav nav-children">
+                                                  <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业1 
+                                                     </a>
+                                                  </li> 
+                                                   <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业2 
+                                                     </a>
+                                                  </li> 
+                                                   <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业3 
+                                                     </a>
+                                                  </li>    
+                                                </ul>
+                                            </li>
+
+                                             <li class="nav-parent">
+                                                <a> 
+                                                    <i class="fa fa-copy" aria-hidden="true"></i>
+                                                    <span>张明悦</span>
+                                                </a>
+                                                <ul class="nav nav-children">
+                                                  <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业1 
+                                                     </a>
+                                                  </li> 
+                                                   <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业2 
+                                                     </a>
+                                                  </li> 
+                                                   <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业3 
+                                                     </a>
+                                                  </li>    
+                                                </ul>
+                                            </li>
+
+                                           <!-- <li>
+                                                <a href="statics/pages-signup.html"> 
                                                      Sign Up
                                                 </a>
                                             </li>
@@ -367,16 +464,28 @@ AppAsset::register($this);
                                                 <a href="statics/pages-search-results.html">
                                                      Search Results
                                                 </a>
-                                            </li>
+                                            </li> -->
                                         </ul>
                                     </li>
                                     <li class="nav-parent">
                                         <a>
                                             <i class="fa fa-tasks" aria-hidden="true"></i>
-                                            <span>UI Elements</span>
+                                            <span>团队作业</span>
                                         </a>
                                         <ul class="nav nav-children">
                                             <li>
+                                                <a href="statics/ui-elements-charts.html">
+                                                     疫情
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="statics/ui-elements-charts.html">
+                                                     经济
+                                                </a>
+                                            </li>
+
+
+                                           <!-- <li>
                                                 <a href="statics/ui-elements-typography.html">
                                                      Typography
                                                 </a>
@@ -480,10 +589,10 @@ AppAsset::register($this);
                                                 <a href="statics/ui-elements-extra.html">
                                                      Extra
                                                 </a>
-                                            </li>
+                                            </li> -->
                                         </ul>
                                     </li>
-                                    <li class="nav-parent">
+                                   <!-- <li class="nav-parent">
                                         <a>
                                             <i class="fa fa-list-alt" aria-hidden="true"></i>
                                             <span>Forms</span>
@@ -648,7 +757,7 @@ AppAsset::register($this);
                                             <i class="fa fa-external-link" aria-hidden="true"></i>
                                             <span>Front-End <em class="not-included">(Not Included)</em></span>
                                         </a>
-                                    </li>
+                                    </li>-->
                                 </ul>
                             </nav>
                 
