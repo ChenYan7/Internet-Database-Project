@@ -10,6 +10,8 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use common\widgets\Alert;
+use backend\models\MemberSearch;
+//use Yii;
 
 AppAsset::register($this);
 ?>
@@ -31,7 +33,7 @@ AppAsset::register($this);
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-    
+
 </head>
 <body>
 <?php $this->beginBody() ?>
@@ -275,26 +277,121 @@ AppAsset::register($this);
                             <nav id="menu" class="nav-main" role="navigation">
                                 <ul class="nav nav-main">
                                     <li class="nav-active">
-                                        <a href="statics/index.html">
+                                        <!-- <a href="statics/index.html"> -->
+                                            <a href="index.php">
                                             <i class="fa fa-home" aria-hidden="true"></i>
                                             <span>Dashboard</span>
                                         </a>
                                     </li>
-                                    <li>
+                                    <!--<li>
                                         <a href="statics/mailbox-folder.html">
                                             <span class="pull-right label label-primary">182</span>
                                             <i class="fa fa-envelope" aria-hidden="true"></i>
                                             <span>Mailbox</span>
                                         </a>
-                                    </li>
+                                    </li>-->
                                     <li class="nav-parent">
                                         <a>
                                             <i class="fa fa-copy" aria-hidden="true"></i>
-                                            <span>Pages</span>
+                                            <span>个人作业</span>
                                         </a>
                                         <ul class="nav nav-children">
-                                            <li>
-                                                <a href="statics/pages-signup.html">
+                                             <li class="nav-parent">
+                                                <a> 
+                                                    <i class="fa fa-copy" aria-hidden="true"></i>
+                                                    <span>陈燕</span>
+                                                </a>
+                                                <ul class="nav nav-children">
+                                                  <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业1 :web前端初探
+                                                     </a>
+                                                  </li> 
+                                                   <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业2：web前端设计
+                                                     </a>
+                                                  </li> 
+                                                   <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业3：开源建站工具初始文档
+                                                     </a>
+                                                  </li>    
+                                                </ul>
+                                            </li>
+                                            
+                                             <li class="nav-parent">
+                                                <a> 
+                                                    <i class="fa fa-copy" aria-hidden="true"></i>
+                                                    <span>苑华莹</span>
+                                                </a>
+                                                <ul class="nav nav-children">
+                                                  <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业1 :web前端初探 
+                                                     </a>
+                                                  </li> 
+                                                   <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业2：web前端设计
+                                                     </a>
+                                                  </li> 
+                                                   <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业3：开源建站工具初始文档 
+                                                     </a>
+                                                  </li>    
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-parent">
+                                                <a> 
+                                                    <i class="fa fa-copy" aria-hidden="true"></i>
+                                                    <span>郑惠麟</span>
+                                                </a>
+                                                <ul class="nav nav-children">
+                                                  <li>
+                                                     <a href="\yii\frontend\web\作业展示\data\personal\作业1（1811522_郑惠麟）.zip" download="作业1（1811522_郑惠麟）.zip">作业1 :web前端初探</a>
+                                                  </li> 
+                                                   <li>
+                                                     <a href="\yii\frontend\web\作业展示\data\personal\作业2 （1811522_郑惠麟）.zip" download="作业2 （1811522_郑惠麟）.zip">
+                                                     作业2：web前端设计 
+                                                     </a>
+                                                  </li> 
+                                                   <li>
+                                                     <a href="\yii\frontend\web\作业展示\data\personal\作业3（1811522_郑惠麟）.zip"download="作业3（1811522_郑惠麟）.zip">
+                                                     作业3：开源建站工具初始文档
+                                                     </a>
+                                                  </li>    
+                                                </ul>
+                                            </li>
+
+                                             <li class="nav-parent">
+                                                <a> 
+                                                    <i class="fa fa-copy" aria-hidden="true"></i>
+                                                    <span>张明悦</span>
+                                                </a>
+                                                <ul class="nav nav-children">
+                                                  <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业1 :web前端初探
+                                                     </a>
+                                                  </li> 
+                                                   <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业2：web前端设计 
+                                                     </a>
+                                                  </li> 
+                                                   <li>
+                                                     <a href="statics/pages-signup.html">
+                                                     作业3：开源建站工具初始文档 
+                                                     </a>
+                                                  </li>    
+                                                </ul>
+                                            </li>
+
+                                           <!-- <li>
+                                                <a href="statics/pages-signup.html"> 
                                                      Sign Up
                                                 </a>
                                             </li>
@@ -367,16 +464,48 @@ AppAsset::register($this);
                                                 <a href="statics/pages-search-results.html">
                                                      Search Results
                                                 </a>
-                                            </li>
+                                            </li> -->
                                         </ul>
                                     </li>
                                     <li class="nav-parent">
                                         <a>
                                             <i class="fa fa-tasks" aria-hidden="true"></i>
-                                            <span>UI Elements</span>
+                                            <span>团队作业</span>
                                         </a>
                                         <ul class="nav nav-children">
                                             <li>
+                                                <a href="\yii\frontend\views\area\">
+                                                     疫情
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="statics/ui-elements-charts.html">
+                                                     经济
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="statics/ui-elements-charts.html">
+                                                     需求文档
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="statics/ui-elements-charts.html">
+                                                     实现文档
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="statics/ui-elements-charts.html">
+                                                     用户手册
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="statics/ui-elements-charts.html">
+                                                     部署文档
+                                                </a>
+                                            </li>
+
+
+                                           <!-- <li>
                                                 <a href="statics/ui-elements-typography.html">
                                                      Typography
                                                 </a>
@@ -480,10 +609,10 @@ AppAsset::register($this);
                                                 <a href="statics/ui-elements-extra.html">
                                                      Extra
                                                 </a>
-                                            </li>
+                                            </li> -->
                                         </ul>
                                     </li>
-                                    <li class="nav-parent">
+                                   <!-- <li class="nav-parent">
                                         <a>
                                             <i class="fa fa-list-alt" aria-hidden="true"></i>
                                             <span>Forms</span>
@@ -648,7 +777,7 @@ AppAsset::register($this);
                                             <i class="fa fa-external-link" aria-hidden="true"></i>
                                             <span>Front-End <em class="not-included">(Not Included)</em></span>
                                         </a>
-                                    </li>
+                                    </li>-->
                                 </ul>
                             </nav>
                 
@@ -713,7 +842,6 @@ AppAsset::register($this);
                 
                 </aside>
                 <!-- end: sidebar -->
-
                 <section role="main" class="content-body">
                     <header class="page-header">
                         <h2>Dashboard</h2>
@@ -731,8 +859,12 @@ AppAsset::register($this);
                             <a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
                         </div>
                     </header>
-
-                        <div class="row">
+                     <section id="content" class="table-layout animated fadeIn">
+        <?= $content ?>
+      
+      </section>
+      <!-- End: Content -->
+                       <!-- <div class="row">
                         <div class="col-md-6">
                             <section class="panel">
                                 <header class="panel-heading">
@@ -744,10 +876,10 @@ AppAsset::register($this);
                                     <h2 class="panel-title">Best Seller</h2>
                                     <p class="panel-subtitle">Customize the graphs as much as you want, there are so many options and features to display information using JSOFT Admin Template.</p>
                                 </header>
-                                <div class="panel-body">
+                                <div class="panel-body">-->
 
                                     <!-- Flot: Basic -->
-                                    <div class="chart chart-md" id="flotDashBasic"></div>
+                                   <!-- <div class="chart chart-md" id="flotDashBasic"></div>
                                     <script>
 
                                         var flotDashBasicData = [{
@@ -806,8 +938,8 @@ AppAsset::register($this);
 
                                 </div>
                             </section>
-                        </div>
-                        <div class="col-md-6">
+                        </div>-->
+                       <!-- <div class="col-md-6">
                             <section class="panel">
                                 <header class="panel-heading">
                                     <div class="panel-actions">
@@ -817,19 +949,19 @@ AppAsset::register($this);
                                     <h2 class="panel-title">Server Usage</h2>
                                     <p class="panel-subtitle">It's easy to create custom graphs on JSOFT Admin Template, there are several graph types that you can use, such as lines, bars, pie charts, etc...</p>
                                 </header>
-                                <div class="panel-body">
+                                <div class="panel-body">-->
 
                                     <!-- Flot: Curves -->
-                                    <div class="chart chart-md" id="flotDashRealTime"></div>
+                                    <!--<div class="chart chart-md" id="flotDashRealTime"></div>-->
                                    <!-- <div class="chart chart-md" id="flotDashRealTime" style="padding: 0px; position: relative;"><canvas class="flot-base" width="692" height="437" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 554px; height: 350px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 328px; left: 13px; text-align: right;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 262px; left: 7px; text-align: right;">20</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 197px; left: 7px; text-align: right;">40</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 131px; left: 7px; text-align: right;">60</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 66px; left: 7px; text-align: right;">80</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 0px; left: 1px; text-align: right;">100</div></div></div><canvas class="flot-overlay" width="692" height="437" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 554px; height: 350px;"></canvas></div>-->
 
-                                </div>
+                                <!--</div>
                             </section>
                         </div>
-                    </div>
+                    </div>-->
 
                     <!-- start: page -->
-                    <div class="row">
+                    <!--<div class="row">
                         <div class="col-md-6 col-lg-12 col-xl-6">
                             <section class="panel">
                                 <div class="panel-body">
@@ -845,11 +977,11 @@ AppAsset::register($this);
                                                             <option value="JSOFT Wordpress" >JSOFT Wordpress</option>
                                                         </select>
                                                     </strong>
-                                                </h2>
+                                                </h2>-->
 
-                                                <div id="salesSelectorItems" class="chart-data-selector-items mt-sm">
+                                                <!--<div id="salesSelectorItems" class="chart-data-selector-items mt-sm">-->
                                                     <!-- Flot: Sales JSOFT Admin -->
-                                                    <div class="chart chart-sm" data-sales-rel="JSOFT Admin" id="flotDashSales1" class="chart-active"></div>
+                                                    <!--<div class="chart chart-sm" data-sales-rel="JSOFT Admin" id="flotDashSales1" class="chart-active"></div>
                                                     <script>
 
                                                         var flotDashSales1Data = [{
@@ -868,13 +1000,13 @@ AppAsset::register($this);
 
                                                         // See: assets/javascripts/dashboard/examples.dashboard.js for more settings.
 
-                                                    </script>
+                                                    </script>-->
 
                                                     <!-- Flot: Sales JSOFT Drupal -->
-                                                    <div class="chart chart-sm" data-sales-rel="JSOFT Drupal" id="flotDashSales2" class="chart-hidden"></div>
-                                                    <script>
+                                                   <!-- <div class="chart chart-sm" data-sales-rel="JSOFT Drupal" id="flotDashSales2" class="chart-hidden"></div>
+                                                    <script>-->
 
-                                                        var flotDashSales2Data = [{
+                                                       <!-- var flotDashSales2Data = [{
                                                             data: [
                                                                 ["Jan", 240],
                                                                 ["Feb", 240],
@@ -890,10 +1022,10 @@ AppAsset::register($this);
 
                                                         // See: assets/javascripts/dashboard/examples.dashboard.js for more settings.
 
-                                                    </script>
+                                                    </script>-->
 
                                                     <!-- Flot: Sales JSOFT Wordpress -->
-                                                    <div class="chart chart-sm" data-sales-rel="JSOFT Wordpress" id="flotDashSales3" class="chart-hidden"></div>
+                                                    <!--<div class="chart chart-sm" data-sales-rel="JSOFT Wordpress" id="flotDashSales3" class="chart-hidden"></div>
                                                     <script>
 
                                                         var flotDashSales3Data = [{
@@ -916,8 +1048,8 @@ AppAsset::register($this);
                                                 </div>
 
                                             </div>
-                                        </div>
-                                        <div class="col-lg-4 text-center">
+                                        </div>-->
+                                       <!-- <div class="col-lg-4 text-center">
                                             <h2 class="panel-title mt-md">Sales Goal</h2>
                                             <div class="liquid-meter-wrapper liquid-meter-sm mt-lg">
                                                 <div class="liquid-meter">
@@ -932,8 +1064,8 @@ AppAsset::register($this);
                                     </div>
                                 </div>
                             </section>
-                        </div>
-                        <div class="col-md-6 col-lg-12 col-xl-6">
+                        </div>-->
+                        <!--<div class="col-md-6 col-lg-12 col-xl-6">
                             <div class="row">
                                 <div class="col-md-12 col-lg-6 col-xl-6">
                                     <section class="panel panel-featured-left panel-featured-primary">
@@ -946,7 +1078,7 @@ AppAsset::register($this);
                                                 </div>
                                                 <div class="widget-summary-col">
                                                     <div class="summary">
-                                                        <h4 class="title">Support Questions</h4>
+                                                        <h4 class="title">陈燕</h4>
                                                         <div class="info">
                                                             <strong class="amount">1281</strong>
                                                             <span class="text-primary">(14 unread)</span>
@@ -1034,10 +1166,10 @@ AppAsset::register($this);
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
 
                     
-
+                    <!--<h1 align="center">团队成员介绍</h1>
                     <div class="row">
                         <div class="col-xl-3 col-lg-6">
                             <section class="panel panel-transparent">
@@ -1045,23 +1177,210 @@ AppAsset::register($this);
                                     <div class="panel-actions">
                                         <a href="#" class="fa fa-caret-down"></a>
                                         <a href="#" class="fa fa-times"></a>
-                                    </div>
+                                    </div>-->
 
-                                    <h2 class="panel-title">My Profile</h2>
-                                </header>
+                                    <!--<h2 class="panel-title">团队成员介绍</h2>-->
+                               <!-- </header>
                                 <div class="panel-body">
                                     <section class="panel panel-group">
                                         <header class="panel-heading bg-primary">
 
                                             <div class="widget-profile-info">
                                                 <div class="profile-picture">
-                                                    <img src="statics/assets/images/!logged-user.jpg">
+                                                    <img src="statics/assets/images/cy.jpg">
+                                                </div>
+                                                <div class="profile-info">-->
+                                                    <!--<?php 
+                                                    //$connection=Yii::app()->db;
+                                                    //$sql="select * from member";
+                                                    //$command=$connection->createCommand($sql);
+                                                    //$value=$command->queryScalar();
+                                                    //$dataReader=$command->query(); // 重复调用 read() 直到它返回 false
+
+                                                    //while(($row=$dataReader->read())!==false) { ... } // 使用 foreach 遍历数据中的每一行
+
+                                                    //foreach($dataReader as $row) { ... } // 一次性提取所有行到一个数组
+
+                                                     //$rows=$dataReader->readAll();?>-->
+                                                    <!--<h4 class="name text-semibold"></h4>
+                                                    <h5 class="role">组员</h5>-->
+                                                    <!--<div class="profile-footer">
+                                                        <a href="statics/pages-signin.html">编辑</a>
+                                                    </div>-->
+                                               <!-- </div>
+                                            </div>
+
+                                        </header>
+                                        <div id="accordion">
+                                            <div class="panel panel-accordion panel-accordion-first">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1One">
+                                                            <i class="fa fa-check"></i> Tasks
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapse1One" class="accordion-body collapse in">
+                                                    <div class="panel-body">
+                                                        <ul class="widget-todo-list">
+                                                            <li>
+                                                                <div class="checkbox-custom checkbox-default">
+                                                                    <input type="checkbox" checked="" id="todoListItem1" class="todo-check">
+                                                                    <label class="todo-label" for="todoListItem1"><span>Lorem ipsum dolor sit amet</span></label>
+                                                                </div>
+                                                                <div class="todo-actions">
+                                                                    <a class="todo-remove" href="#">
+                                                                        <i class="fa fa-times"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox-custom checkbox-default">
+                                                                    <input type="checkbox" id="todoListItem2" class="todo-check">
+                                                                    <label class="todo-label" for="todoListItem2"><span>Lorem ipsum dolor sit amet</span></label>
+                                                                </div>
+                                                                <div class="todo-actions">
+                                                                    <a class="todo-remove" href="#">
+                                                                        <i class="fa fa-times"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox-custom checkbox-default">
+                                                                    <input type="checkbox" id="todoListItem3" class="todo-check">
+                                                                    <label class="todo-label" for="todoListItem3"><span>Lorem ipsum dolor sit amet</span></label>
+                                                                </div>
+                                                                <div class="todo-actions">
+                                                                    <a class="todo-remove" href="#">
+                                                                        <i class="fa fa-times"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox-custom checkbox-default">
+                                                                    <input type="checkbox" id="todoListItem4" class="todo-check">
+                                                                    <label class="todo-label" for="todoListItem4"><span>Lorem ipsum dolor sit amet</span></label>
+                                                                </div>
+                                                                <div class="todo-actions">
+                                                                    <a class="todo-remove" href="#">
+                                                                        <i class="fa fa-times"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox-custom checkbox-default">
+                                                                    <input type="checkbox" id="todoListItem5" class="todo-check">
+                                                                    <label class="todo-label" for="todoListItem5"><span>Lorem ipsum dolor sit amet</span></label>
+                                                                </div>
+                                                                <div class="todo-actions">
+                                                                    <a class="todo-remove" href="#">
+                                                                        <i class="fa fa-times"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox-custom checkbox-default">
+                                                                    <input type="checkbox" id="todoListItem6" class="todo-check">
+                                                                    <label class="todo-label" for="todoListItem6"><span>Lorem ipsum dolor sit amet</span></label>
+                                                                </div>
+                                                                <div class="todo-actions">
+                                                                    <a class="todo-remove" href="#">
+                                                                        <i class="fa fa-times"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <hr class="solid mt-sm mb-lg">
+                                                        <form method="get" class="form-horizontal form-bordered">
+                                                            <div class="form-group">
+                                                                <div class="col-sm-12">
+                                                                    <div class="input-group mb-md">
+                                                                        <input type="text" class="form-control">
+                                                                        <div class="input-group-btn">
+                                                                            <button type="button" class="btn btn-primary" tabindex="-1">Add</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-accordion">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1Two">
+                                                             <i class="fa fa-comment"></i> Messages
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapse1Two" class="accordion-body collapse">
+                                                    <div class="panel-body">
+                                                        <ul class="simple-user-list mb-xlg">
+                                                            <li>
+                                                                <figure class="image rounded">
+                                                                    <img src="statics/assets/images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle">
+                                                                </figure>
+                                                                <span class="title">Joseph Doe Junior</span>
+                                                                <span class="message">Lorem ipsum dolor sit.</span>
+                                                            </li>
+                                                            <li>
+                                                                <figure class="image rounded">
+                                                                    <img src="statics/assets/images/!sample-user.jpg" alt="Joseph Junior" class="img-circle">
+                                                                </figure>
+                                                                <span class="title">Joseph Junior</span>
+                                                                <span class="message">Lorem ipsum dolor sit.</span>
+                                                            </li>
+                                                            <li>
+                                                                <figure class="image rounded">
+                                                                    <img src="statics/assets/images/!sample-user.jpg" alt="Joe Junior" class="img-circle">
+                                                                </figure>
+                                                                <span class="title">Joe Junior</span>
+                                                                <span class="message">Lorem ipsum dolor sit.</span>
+                                                            </li>
+                                                            <li>
+                                                                <figure class="image rounded">
+                                                                    <img src="statics/assets/images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle">
+                                                                </figure>
+                                                                <span class="title">Joseph Doe Junior</span>
+                                                                <span class="message">Lorem ipsum dolor sit.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                </div>
+                            </section>
+                        </div>
+
+
+                        <div class="row">
+                        <div class="col-xl-3 col-lg-6">
+                            <section class="panel panel-transparent">
+                                <header class="panel-heading">
+                                    <div class="panel-actions">
+                                        <a href="#" class="fa fa-caret-down"></a>
+                                        <a href="#" class="fa fa-times"></a>
+                                    </div>-->
+
+                                    <!--<h2 class="panel-title">苑华莹</h2>-->
+                                <!--</header>
+                                <div class="panel-body">
+                                    <section class="panel panel-group">
+                                        <header class="panel-heading bg-primary">
+
+                                            <div class="widget-profile-info">
+                                                <div class="profile-picture">
+                                                    <img src="statics/assets/images/yhy.jpg">
                                                 </div>
                                                 <div class="profile-info">
-                                                    <h4 class="name text-semibold">John Doe</h4>
-                                                    <h5 class="role">Administrator</h5>
+                                                    <h4 class="name text-semibold">苑华莹</h4>
+                                                    <h5 class="role">组长</h5>
                                                     <div class="profile-footer">
-                                                        <a href="#">(edit profile)</a>
+                                                        <a href="statics/pages-signin.html">编辑</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1211,7 +1530,357 @@ AppAsset::register($this);
                                 </div>
                             </section>
                         </div>
+
+
+                        <div class="row">
                         <div class="col-xl-3 col-lg-6">
+                            <section class="panel panel-transparent">
+                                <header class="panel-heading">
+                                    <div class="panel-actions">
+                                        <a href="#" class="fa fa-caret-down"></a>
+                                        <a href="#" class="fa fa-times"></a>
+                                    </div>-->
+
+                                   <!-- <h2 class="panel-title">郑惠麟</h2>-->
+                               <!-- </header>
+                                <div class="panel-body">
+                                    <section class="panel panel-group">
+                                        <header class="panel-heading bg-primary">
+
+                                            <div class="widget-profile-info">
+                                                <div class="profile-picture">
+                                                    <img src="statics/assets/images/zhl.jpg">
+                                                </div>
+                                                <div class="profile-info">
+                                                    <h4 class="name text-semibold">郑惠麟</h4>
+                                                    <h5 class="role">组员</h5>
+                                                    <div class="profile-footer">
+                                                        <a href="<?php echo Url::to(['member/index']) ?>">编辑</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </header>
+                                        <div id="accordion">
+                                            <div class="panel panel-accordion panel-accordion-first">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1One">
+                                                            <i class="fa fa-check"></i> Tasks
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapse1One" class="accordion-body collapse in">
+                                                    <div class="panel-body">
+                                                        <ul class="widget-todo-list">
+                                                            <li>
+                                                                <div class="checkbox-custom checkbox-default">
+                                                                    <input type="checkbox" checked="" id="todoListItem1" class="todo-check">
+                                                                    <label class="todo-label" for="todoListItem1"><span>Lorem ipsum dolor sit amet</span></label>
+                                                                </div>
+                                                                <div class="todo-actions">
+                                                                    <a class="todo-remove" href="#">
+                                                                        <i class="fa fa-times"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox-custom checkbox-default">
+                                                                    <input type="checkbox" id="todoListItem2" class="todo-check">
+                                                                    <label class="todo-label" for="todoListItem2"><span>Lorem ipsum dolor sit amet</span></label>
+                                                                </div>
+                                                                <div class="todo-actions">
+                                                                    <a class="todo-remove" href="#">
+                                                                        <i class="fa fa-times"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox-custom checkbox-default">
+                                                                    <input type="checkbox" id="todoListItem3" class="todo-check">
+                                                                    <label class="todo-label" for="todoListItem3"><span>Lorem ipsum dolor sit amet</span></label>
+                                                                </div>
+                                                                <div class="todo-actions">
+                                                                    <a class="todo-remove" href="#">
+                                                                        <i class="fa fa-times"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox-custom checkbox-default">
+                                                                    <input type="checkbox" id="todoListItem4" class="todo-check">
+                                                                    <label class="todo-label" for="todoListItem4"><span>Lorem ipsum dolor sit amet</span></label>
+                                                                </div>
+                                                                <div class="todo-actions">
+                                                                    <a class="todo-remove" href="#">
+                                                                        <i class="fa fa-times"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox-custom checkbox-default">
+                                                                    <input type="checkbox" id="todoListItem5" class="todo-check">
+                                                                    <label class="todo-label" for="todoListItem5"><span>Lorem ipsum dolor sit amet</span></label>
+                                                                </div>
+                                                                <div class="todo-actions">
+                                                                    <a class="todo-remove" href="#">
+                                                                        <i class="fa fa-times"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox-custom checkbox-default">
+                                                                    <input type="checkbox" id="todoListItem6" class="todo-check">
+                                                                    <label class="todo-label" for="todoListItem6"><span>Lorem ipsum dolor sit amet</span></label>
+                                                                </div>
+                                                                <div class="todo-actions">
+                                                                    <a class="todo-remove" href="#">
+                                                                        <i class="fa fa-times"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <hr class="solid mt-sm mb-lg">
+                                                        <form method="get" class="form-horizontal form-bordered">
+                                                            <div class="form-group">
+                                                                <div class="col-sm-12">
+                                                                    <div class="input-group mb-md">
+                                                                        <input type="text" class="form-control">
+                                                                        <div class="input-group-btn">
+                                                                            <button type="button" class="btn btn-primary" tabindex="-1">Add</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-accordion">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1Two">
+                                                             <i class="fa fa-comment"></i> Messages
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapse1Two" class="accordion-body collapse">
+                                                    <div class="panel-body">
+                                                        <ul class="simple-user-list mb-xlg">
+                                                            <li>
+                                                                <figure class="image rounded">
+                                                                    <img src="statics/assets/images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle">
+                                                                </figure>
+                                                                <span class="title">Joseph Doe Junior</span>
+                                                                <span class="message">Lorem ipsum dolor sit.</span>
+                                                            </li>
+                                                            <li>
+                                                                <figure class="image rounded">
+                                                                    <img src="statics/assets/images/!sample-user.jpg" alt="Joseph Junior" class="img-circle">
+                                                                </figure>
+                                                                <span class="title">Joseph Junior</span>
+                                                                <span class="message">Lorem ipsum dolor sit.</span>
+                                                            </li>
+                                                            <li>
+                                                                <figure class="image rounded">
+                                                                    <img src="statics/assets/images/!sample-user.jpg" alt="Joe Junior" class="img-circle">
+                                                                </figure>
+                                                                <span class="title">Joe Junior</span>
+                                                                <span class="message">Lorem ipsum dolor sit.</span>
+                                                            </li>
+                                                            <li>
+                                                                <figure class="image rounded">
+                                                                    <img src="statics/assets/images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle">
+                                                                </figure>
+                                                                <span class="title">Joseph Doe Junior</span>
+                                                                <span class="message">Lorem ipsum dolor sit.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                </div>
+                            </section>
+                        </div>
+
+
+                        <div class="row">
+                        <div class="col-xl-3 col-lg-6">
+                            <section class="panel panel-transparent">
+                                <header class="panel-heading">
+                                    <div class="panel-actions">
+                                        <a href="#" class="fa fa-caret-down"></a>
+                                        <a href="#" class="fa fa-times"></a>
+                                    </div>-->
+
+                                    <!--<h2 class="panel-title">张明悦</h2>-->
+                                <!--</header>
+                                <div class="panel-body">
+                                    <section class="panel panel-group">
+                                        <header class="panel-heading bg-primary">
+
+                                            <div class="widget-profile-info">
+                                                <div class="profile-picture">
+                                                    <img src="statics/assets/images/zmy.jpg">
+                                                </div>
+                                                <div class="profile-info">
+                                                    <h4 class="name text-semibold">张明悦</h4>
+                                                   <h5 class="role">组员</h5>
+                                                    <div class="profile-footer">
+                                                        <a href="statics/pages-signin.html">编辑</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </header>
+                                        <div id="accordion">
+                                            <div class="panel panel-accordion panel-accordion-first">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1One">
+                                                            <i class="fa fa-check"></i> Tasks
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapse1One" class="accordion-body collapse in">
+                                                    <div class="panel-body">
+                                                        <ul class="widget-todo-list">
+                                                            <li>
+                                                                <div class="checkbox-custom checkbox-default">
+                                                                    <input type="checkbox" checked="" id="todoListItem1" class="todo-check">
+                                                                    <label class="todo-label" for="todoListItem1"><span>Lorem ipsum dolor sit amet</span></label>
+                                                                </div>
+                                                                <div class="todo-actions">
+                                                                    <a class="todo-remove" href="#">
+                                                                        <i class="fa fa-times"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox-custom checkbox-default">
+                                                                    <input type="checkbox" id="todoListItem2" class="todo-check">
+                                                                    <label class="todo-label" for="todoListItem2"><span>Lorem ipsum dolor sit amet</span></label>
+                                                                </div>
+                                                                <div class="todo-actions">
+                                                                    <a class="todo-remove" href="#">
+                                                                        <i class="fa fa-times"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox-custom checkbox-default">
+                                                                    <input type="checkbox" id="todoListItem3" class="todo-check">
+                                                                    <label class="todo-label" for="todoListItem3"><span>Lorem ipsum dolor sit amet</span></label>
+                                                                </div>
+                                                                <div class="todo-actions">
+                                                                    <a class="todo-remove" href="#">
+                                                                        <i class="fa fa-times"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox-custom checkbox-default">
+                                                                    <input type="checkbox" id="todoListItem4" class="todo-check">
+                                                                    <label class="todo-label" for="todoListItem4"><span>Lorem ipsum dolor sit amet</span></label>
+                                                                </div>
+                                                                <div class="todo-actions">
+                                                                    <a class="todo-remove" href="#">
+                                                                        <i class="fa fa-times"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox-custom checkbox-default">
+                                                                    <input type="checkbox" id="todoListItem5" class="todo-check">
+                                                                    <label class="todo-label" for="todoListItem5"><span>Lorem ipsum dolor sit amet</span></label>
+                                                                </div>
+                                                                <div class="todo-actions">
+                                                                    <a class="todo-remove" href="#">
+                                                                        <i class="fa fa-times"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="checkbox-custom checkbox-default">
+                                                                    <input type="checkbox" id="todoListItem6" class="todo-check">
+                                                                    <label class="todo-label" for="todoListItem6"><span>Lorem ipsum dolor sit amet</span></label>
+                                                                </div>
+                                                                <div class="todo-actions">
+                                                                    <a class="todo-remove" href="#">
+                                                                        <i class="fa fa-times"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <hr class="solid mt-sm mb-lg">
+                                                        <form method="get" class="form-horizontal form-bordered">
+                                                            <div class="form-group">
+                                                                <div class="col-sm-12">
+                                                                    <div class="input-group mb-md">
+                                                                        <input type="text" class="form-control">
+                                                                        <div class="input-group-btn">
+                                                                            <button type="button" class="btn btn-primary" tabindex="-1">Add</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-accordion">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1Two">
+                                                             <i class="fa fa-comment"></i> Messages
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapse1Two" class="accordion-body collapse">
+                                                    <div class="panel-body">
+                                                        <ul class="simple-user-list mb-xlg">
+                                                            <li>
+                                                                <figure class="image rounded">
+                                                                    <img src="statics/assets/images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle">
+                                                                </figure>
+                                                                <span class="title">Joseph Doe Junior</span>
+                                                                <span class="message">Lorem ipsum dolor sit.</span>
+                                                            </li>
+                                                            <li>
+                                                                <figure class="image rounded">
+                                                                    <img src="statics/assets/images/!sample-user.jpg" alt="Joseph Junior" class="img-circle">
+                                                                </figure>
+                                                                <span class="title">Joseph Junior</span>
+                                                                <span class="message">Lorem ipsum dolor sit.</span>
+                                                            </li>
+                                                            <li>
+                                                                <figure class="image rounded">
+                                                                    <img src="statics/assets/images/!sample-user.jpg" alt="Joe Junior" class="img-circle">
+                                                                </figure>
+                                                                <span class="title">Joe Junior</span>
+                                                                <span class="message">Lorem ipsum dolor sit.</span>
+                                                            </li>
+                                                            <li>
+                                                                <figure class="image rounded">
+                                                                    <img src="statics/assets/images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle">
+                                                                </figure>
+                                                                <span class="title">Joseph Doe Junior</span>
+                                                                <span class="message">Lorem ipsum dolor sit.</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                </div>
+                            </section>
+                        </div>-->
+                        <!--<div class="col-xl-3 col-lg-6">
                             <section class="panel panel-transparent">
                                 <header class="panel-heading">
                                     <div class="panel-actions">
@@ -1309,8 +1978,8 @@ AppAsset::register($this);
                                     </div>
                                 </div>
                             </section>
-                        </div>
-                        <div class="col-xl-6 col-lg-12">
+                        </div>-->
+                        <!--<div class="col-xl-6 col-lg-12">
                             <section class="panel">
                                 <header class="panel-heading panel-heading-transparent">
                                     <div class="panel-actions">
@@ -1356,9 +2025,9 @@ AppAsset::register($this);
                                     </div>
                                 </div>
                             </section>
-                        </div>
-                    </div>
-                    <div class="row">
+                        </div>-->
+                    <!--</div>-->
+                    <!--<div class="row">
                         <div class="col-lg-6 col-md-12">
                             <section class="panel panel-transparent">
                                 <header class="panel-heading">
@@ -1373,8 +2042,8 @@ AppAsset::register($this);
                                     <div id="vectorMapWorld" style="height: 350px; width: 100%;"></div>
                                 </div>
                             </section>
-                        </div>
-                        <div class="col-lg-6 col-md-12">
+                        </div>-->
+                        <!--<div class="col-lg-6 col-md-12">
                             <section class="panel">
                                 <header class="panel-heading panel-heading-transparent">
                                     <div class="panel-actions">
@@ -1485,13 +2154,13 @@ AppAsset::register($this);
                                     </div>
                                 </div>
                             </section>
-                        </div>
-                    </div>More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
+                        </div>-->
+                    <!--</div>More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>-->
                     <!-- end: page -->
                 </section>
             </div>
 
-            <aside id="sidebar-right" class="sidebar-right">
+            <!--<aside id="sidebar-right" class="sidebar-right">
                 <div class="nano">
                     <div class="nano-content">
                         <a href="#" class="mobile-close visible-xs">
@@ -1557,7 +2226,7 @@ AppAsset::register($this);
                         </div>
                     </div>
                 </div>
-            </aside>
+            </aside>-->
 
 <?php $this->endBody() ?>
 </body>
